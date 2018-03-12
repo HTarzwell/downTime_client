@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>downTime App</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body class="container-fluid">
+    <div id="before-signinauth">
+      <div>
+        <p id="before-signinauth-message"></p>
+        <form id="user-signup">
+          <fieldset>
+            <legend>Sign Up</legend>
+              <input type="text" name="credentials[email]" placeholder="Email">
+              <input type="password" name="credentials[password]" placeholder="Password">
+              <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+              <input type="submit" value="Sign Up">
+          </fieldset>
+        </form>
+      </div>
+      <div>
+        <form id="user-signin">
+          <fieldset>
+            <legend>Sign In</legend>
+              <input type="text" name="credentials[email]" placeholder="Email">
+              <input type="password" name="credentials[password]" placeholder="Password">
+              <input type="submit" value="Sign In">
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <div id="after-signinauth">
+      <div>
+        <p id="after-signinauth-message"></p>
+        <form id="user-changepwd">
+          <fieldset>
+            <legend>Change Password</legend>
+              <input type="password" name="passwords[old]" placeholder="Old Password">
+              <input type="password" name="passwords[new]" placeholder="New Password">
+              <input type="submit" value="Change Password">
+          </fieldset>
+        </form>
+      </div>
+      <div>
+        <form id="user-signout">
+          <fieldset>
+            <legend>Sign Out</legend>
+              <input type="submit" value="Sign Out">
+          </fieldset>
+        </form>
+      </div>
+      <div>
+        <p id="create-message"></p>
+        <form id="create-downtime">
+          <fieldset>
+            <legend>Log Downtime</legend>
+              <input type="text" name="downtime_instance[date]" placeholder="Date" required>
+              <input type="text" name="downtime_instance[time]" placeholder="Time" required>
+              <input type="text" name="downtime_instance[activity]" placeholder="Activity" required>
+              <input type="submit" value="Log My Downtime">
+          </fieldset>
+        </form>
+      </div>
+      <div>
+        <p id="get-message"></p>
+        <form id="get-downtime">
+          <fieldset>
+            <legend>Get My Downtime</legend>
+              <input type="text" name="downtime_instance[id]" placeholder="Instance ID" required>
+              <input type="submit" value="Get Downtime">
+              <div id="downtime-content" class="downtime-content"></div>
+          </fieldset>
+        </form>
+      </div>
+      <div>
+        <form id="get-alldowntime">
+          <fieldset>
+            <legend>Get ALL My Downtimes</legend>
+              <input type="submit" value="Get All Downtimes">
+              <div id="alldowntime-content" class="alldowntime-content"></div>
+          </fieldset>
+        </form>
+      </div>
+      <div>
+        <p id="update-message"></p>
+        <form id="update-downtime">
+          <fieldset>
+            <legend>Update Downtime</legend>
+              <input type="text" name="downtime_instance[id]" placeholder="Instance ID" required>
+              <input type="text" name="downtime_instance[date]" placeholder="Date" required>
+              <input type="text" name="downtime_instance[time]" placeholder="Time" required>
+              <input type="text" name="downtime_instance[activity]" placeholder="Activity" required>
+              <input type="submit" value="Update My Downtime">
+          </fieldset>
+        </form>
+      </div>
+      <div>
+        <p id="delete-message"></p>
+        <form id="delete-downtime">
+          <fieldset>
+            <legend>Delete Downtime Occurance</legend>
+              <input type="text" name="downtime_instance[id]" placeholder="Instance ID" required>
+              <input type="submit" value="Delete">
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    </body>
+</html>
